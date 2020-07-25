@@ -26,7 +26,7 @@ COPY --from=builder /go/src/rss2full/rss2full /app/rss2full
 # Server port to listen
 ENV PORT 8088
 
-ENTRYPOINT ["/app/rss2full"]
+ENTRYPOINT ["/app/rss2full", "-item-count","30"]
 
 EXPOSE ${PORT}
 CMD [""]
